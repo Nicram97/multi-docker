@@ -20,10 +20,11 @@ async function main() {
         database: pgDatabase,
         password: pgPassword,
         port: pgPort,
-        ssl: 
-            process.env.NODE_ENV !== 'production'
-            ? false
-            : { rejectUnauthorized: false }
+        // usage for postgres as a cloud service 
+        // ssl: 
+        //     process.env.NODE_ENV !== 'production'
+        //     ? false
+        //     : { rejectUnauthorized: false }
     });
 
     const pgClient = await pool.connect();
