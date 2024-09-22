@@ -3,7 +3,7 @@ name: "Deploy MultiDocker K8s"
 on:
   push:
     branches:
-      - k8s_gcp
+      - k8s
 
 jobs:
   build:
