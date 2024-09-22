@@ -1,4 +1,4 @@
-name: "Deploy MultiDocker K8s-gcp"
+name: "Deploy MultiDocker K8s"
 
 on:
   push:
@@ -15,7 +15,6 @@ jobs:
       - run: docker run -e CI=true nicram97/react-test npm test
 
       - run: docker build -t nicram97/multi-client ./client
-      - run: docker build -t nicram97/multi-nginx ./nginx
       - run: docker build -t nicram97/multi-server-k8s ./server
       - run: docker build -t nicram97/multi-worker ./worker
 
